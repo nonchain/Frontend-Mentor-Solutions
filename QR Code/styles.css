@@ -42,7 +42,8 @@ a {
 .content {
    display: flex;
    flex-direction: column;
-   justify-content: center;
+   align-items: center;
+   gap: 3.5rem;
 }
 
 .attribution {
@@ -56,12 +57,14 @@ a {
 
 /*==================== PROJECT CSS ====================*/
 .card {
-   padding: 16px 24px;
+   padding: 16px 16px 32px;
+   width: 284px;
    background-color: var(--white);
    border-radius: 16px;
    display: flex;
    flex-direction: column;
-   justify-content: center;
+   align-items: center;
+   text-align: center;
 }
 
 .card__image {
@@ -71,15 +74,15 @@ a {
 .card__title {
    margin-top: 24px;
    color: var(--dark-blue);
-   font-size: 1rem;
+   font-size: 1.25rem;
    font-weight: 700;
-   line-height: 1.1rem;
+   line-height: 1.5rem;
 }
 
 .card__desc {
    margin-top: 24px;
    color: var(--grayish-blue);
-   font-size: 0.812rem;
+   font-size: 0.9rem;
    font-weight: 400;
    line-height: 1.1rem;
 }
