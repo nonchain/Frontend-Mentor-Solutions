@@ -29,16 +29,49 @@ body {
    font-family: 'Outfit', sans-serif;
 }
 
+img {
+   width: 100%;
+   object-fit: cover;
+}
+
 a {
    text-decoration: none;
    transition: 0.3s ease-out;
 }
 
 .attribution {
-   font-size: 12px;
+   font-size: 0.75rem;
    text-align: center;
 }
 
 .attribution a {
    color: hsl(228, 45%, 44%);
+}
+
+/*==================== PROJECT CSS ====================*/
+.card {
+   padding: 16px 24px;
+   background-color: var(--white);
+   border-radius: 16px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.card__image {
+   border-radius: 8px;
+}
+
+.card__title {
+   margin-top: 24px;
+   font-size: 1rem;
+   font-weight: 600;
+   line-height: 1.1rem;
+}
+
+.card__desc {
+   margin-top: 24px;
+   font-size: 0.812rem;
+   font-weight: 300;
+   line-height: 1.1rem;
 }
