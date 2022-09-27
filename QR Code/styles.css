@@ -39,6 +39,12 @@ a {
    transition: 0.3s ease-out;
 }
 
+.content {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
 .attribution {
    font-size: 0.75rem;
    text-align: center;
