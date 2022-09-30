@@ -9,6 +9,7 @@ body {
    display: flex;
    align-items: center;
    justify-content: center;
+   font-family: 'DM Sans', sans-serif;
 }
 
 a {
