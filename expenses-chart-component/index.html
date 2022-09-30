@@ -1,38 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Expenses chart component</title>
 
+  <link rel="stylesheet" href="styles.css">
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
+
 <body>
 
-  My balance
-  $921.48
+  <div class="content">
+    <div class="chart">
+      <div class="card">
+        <div class="chart__header">
 
-  Spending - Last 7 days
+          <div class="balance">
+            <span>
+              My balance
+            </span>
+            <span class="balance__amount">
+              $921.48
+            </span>
+          </div>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
+          <div class="shape"></div>
+        </div>
+      </div>
 
-  Total this month
-  $478.33
+      <div class="card">
+        Spending - Last 7 days
 
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+        mon
+        tue
+        wed
+        thu
+        fri
+        sat
+        sun
+
+        Total this month
+        $478.33
+
+        +2.4%
+        from last month
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
   </div>
 </body>
+
 </html>

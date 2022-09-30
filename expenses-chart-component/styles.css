@@ -1,3 +1,27 @@
+:root {
+   /*========== COLOR ==========*/
+   --soft-red: hsl(10, 79%, 65%);
+   --cyan: hsl(186, 34%, 60%);
+
+   --dark-brown: hsl(25, 47%, 15%);
+   --medium-brown: hsl(28, 10%, 53%);
+   --cream: hsl(27, 66%, 92%);
+   --very-pale-orange: hsl(33, 100%, 98%);
+
+   /*========== FONT ==========*/
+   --font-bold: 700;
+   --font-medium: 500;
+   --font-normal: 400;
+
+   --text-xs: .75rem;
+   --text-sm: .812rem;
+   --text-md: 1rem;
+   --text-lg: 1.25rem;
+   --text-xl: 1.5rem;
+   --text-2xl: 2rem;
+
+}
+
 * {
    padding: 0;
    margin: 0;
@@ -6,6 +30,7 @@
 
 body {
    height: 100vh;
+   background-color: var(--cream);
    display: flex;
    align-items: center;
    justify-content: center;
@@ -14,6 +39,14 @@ body {
 
 a {
    text-decoration: none;
+   transition: 0.3s ease-out;
+}
+
+.content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 3.5rem;
 }
 
 .attribution {
@@ -23,4 +56,72 @@ a {
 
 .attribution a {
    color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover {
+   color: hsl(228, 45%, 40%);
+   font-size: 0.8rem;
+}
+
+/*==================== PROJECT CSS ====================*/
+.card {
+   width: 100%;
+   border-radius: 16px;
+   overflow: hidden;
+}
+
+.chart {
+   width: 328px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1.5rem;
+}
+
+:is(.chart__header, .chart__body) {
+   padding: 1rem 1.25rem;
+}
+
+/*========== CHART HEADER ==========*/
+.chart__header {
+   width: 100%;
+   background-color: var(--soft-red);
+   color: var(--very-pale-orange);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.balance {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: .35rem;
+}
+.balance > span {
+   font-size: var(--text-xs);
+   font-weight: var(--font-normal);
+}
+.balance > .balance__amount {
+   font-size: var(--text-lg);
+   font-weight: var(--font-medium);
+}
+
+.shape {
+   width: 30px;
+   height: 30px;
+   background-color: var(--dark-brown);
+   border-radius: 99px;
+   position: relative;
+}
+.shape::after {
+   content: '';
+   width: 28px;
+   height: 28px;
+   background-color: transparent;
+   border: 1px var(--very-pale-orange) solid ;
+   border-radius: 99px;
+   position: absolute;
+   left: -50%;
+   top: 0;
 }
