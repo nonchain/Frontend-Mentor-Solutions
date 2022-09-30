@@ -66,24 +66,21 @@ a {
 /*==================== PROJECT CSS ====================*/
 .card {
    width: 100%;
-   border-radius: 16px;
+   border-radius: 14px;
    overflow: hidden;
 }
 
 .chart {
-   width: 328px;
+   width: 368px;
    display: flex;
    flex-direction: column;
    align-items: center;
    gap: 1.5rem;
 }
 
-:is(.chart__header, .chart__body) {
-   padding: 1rem 1.25rem;
-}
-
 /*========== CHART HEADER ==========*/
 .chart__header {
+   padding: 1rem 1.25rem;
    width: 100%;
    background-color: var(--soft-red);
    color: var(--very-pale-orange);
@@ -125,4 +122,75 @@ a {
    position: absolute;
    left: -50%;
    top: 0;
+}
+
+/*========== CHART BODY ==========*/
+.chart__body {
+   padding: 1.5rem 1.35rem;
+   width: 100%;
+   background-color: var(--very-pale-orange);
+   color: var(--dark-brown);
+   display: flex;
+   flex-direction: column;
+}
+
+.title {
+   font-size: var(--text-lg);
+   font-weight: var(--font-bold);
+}
+
+.candles {
+   margin-top: 1.5rem;
+   width: 100%;
+   height: 158px;
+   display: flex;
+   justify-content: center;
+   gap: 0.75rem;
+}
+.candle {
+   flex: 1;
+   display: flex;
+   flex-direction: column-reverse;
+   gap: 0.35rem;
+}
+.candle__body {
+   height: 100%;
+   border-radius: 0.25rem;
+}
+.candle__day {
+   color: var(--medium-brown);
+   display: block;
+   font-size: 0.65rem;
+   font-weight: var(--font-normal);
+   text-align: center;
+}
+
+/* CANDLES */
+.candle__body.cd-1 {
+   height: 25%;
+   background-color: var(--soft-red);
+}
+.candle__body.cd-2 {
+   height: 50%;
+   background-color: var(--soft-red);
+}
+.candle__body.cd-3 {
+   height: 74%;
+   background-color: var(--cyan);
+}
+.candle__body.cd-4 {
+   height: 42%;
+   background-color: var(--soft-red);
+}
+.candle__body.cd-5 {
+   height: 30%;
+   background-color: var(--soft-red);
+}
+.candle__body.cd-6 {
+   height: 60%;
+   background-color: var(--soft-red);
+}
+.candle__body.cd-7 {
+   height: 36%;
+   background-color: var(--soft-red);
 }
