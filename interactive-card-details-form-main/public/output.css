@@ -410,10 +410,6 @@ video {
   height: auto;
 }
 
-html {
-  font-family: 'Space Grotesk', sans-serif;
-}
-
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -553,6 +549,39 @@ html {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-green-600 {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
+.text-very-dark-violet {
+  --tw-text-opacity: 1;
+  color: hsl(278 68% 11% / var(--tw-text-opacity));
+}
+
+.text-light-grayish-violet {
+  --tw-text-opacity: 1;
+  color: hsl(270 3% 87% / var(--tw-text-opacity));
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .attribution {
