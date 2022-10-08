@@ -2,8 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+   .label {
+      @apply mt-6 text-darker-violet text-[15px] uppercase;
+   }
+   .input {
+      @apply px-3 w-full h-11 rounded border border-light-gray outline-none; 
+   }
+   .invalid-error {
+      @apply text-xs text-red-500 hidden;
+   }
+   .input:invalid ~ .invalid-error {
+      @apply block;
+   }
+
+   .button-primary {
+      @apply w-full h-14 bg-darker-violet text-white rounded-lg text-center;
+   }
+
+}
+
 body {
    font-family: 'Space Grotesk', sans-serif;
+}
+
+.current-view {
+   @apply block
 }
 
 .attribution {
@@ -14,4 +38,5 @@ body {
 
 .attribution a {
    color: hsl(228, 45%, 44%);
+   background-color: #6448fe to #600594;
 }

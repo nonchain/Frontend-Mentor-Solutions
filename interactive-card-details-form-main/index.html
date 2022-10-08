@@ -13,39 +13,86 @@
     rel="stylesheet">
 </head>
 
-<body>
-  
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+<body class="flex flex-col items-center justify-center gap-12">
 
-  000
+  <section class="flex flex-col gap-24 font-medium">
+    <!-- CARD SECTION -->
+    <div id="card-section" class="w-full flex relative">
+      <img class="w-full abosolute inset-0 object-cover" src="./images/bg-main-mobile.png" alt="background">
+      <!-- CARD BACK -->
+      <div class="w-[19rem] absolute right-4 top-8">
+        <img class="w-full object-cover " src="./images/bg-card-back.png" alt="card_back" />
+      </div>
+      <!-- CARD FRONT -->
+      <div class="w-[19rem] absolute left-4 -bottom-10">
+        <img class="w-full object-cover " src="./images/bg-card-front.png" alt="card_front" />
 
-  Cardholder Name
-  e.g. Jane Appleseed
+        <div class="px-5 w-full flex flex-col gap-y-8 absolute top-5">
+          <img src="./images/card-logo.svg" alt="" class="w-max h-9">
+          <div class="flex flex-col gap-y-3">
+            <span class="text-lg text-white ">
+              0000 0000 0000 0000
+            </span>
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-light-gray uppercase">
+                Jane Appleseed
+              </span>
+              <span class="text-xs text-light-gray">
+                00/00
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- INFO SECTION -->
+    <form id="info-section" class="px-5 w-full flex flex-col gap-8">
+      <div class="view-form ">
+        <div class="w-full flex flex-col gap-y-2">
+          <label for="card-name" class="label">Cardholder Name</label>
+          <input type="text" id="card-name" class="input" placeholder="e.g. Jane Appleseed">
+        </div>
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+        <div class="w-full flex flex-col gap-y-2">
+          <label for="card-name" class="label">Card Number</label>
+          <input type="text" id="card-name" class="input" placeholder="e.g. 1234 5678 9123 0000" required
+            pattern="^[0-9]{1,16}">
+          <span class="invalid-error">Wrong format, numbers only</span>
+        </div>
 
-  CVC
-  e.g. 123
+        <div class="grid grid-cols-4 gap-x-3">
+          <div class="flex flex-col gap-y-2 col-span-2">
+            <label for="card-name" class="label">Exp. Date (MM/YY)</label>
+            <div class="flex gap-x-2 relative">
+              <input type="text" id="card-name" class="input" placeholder="MM" required pattern="^[0-9]{2,}">
+              <input type="text" id="card-name" class="input" placeholder="YY" required pattern="^[0-9]{2,}">
+              <span class="invalid-error absolute -bottom-6">Can't be blank</span>
+            </div>
+          </div>
+          <div class=" flex flex-col gap-y-2 col-span-2">
+            <label for="card-name" class="label">CVC</label>
+            <input type="text" id="card-name" class="input" placeholder="e.g. 123" required pattern="^[0-9]{3,}">
+            <span class="invalid-error">Can't be blank</span>
+          </div>
+        </div>
+      </div>
 
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
+      <div class="flex-col items-center view-done hidden">
+        <img src="./images/icon-complete.svg" alt="done">
+        <h2 class="mt-8 text-2xl text-darker-violet">Thank you!</h2>
+        <p class="mt-5 text-base text-dark-violet">We've added your card details
+  Continue</p>
+      </div>
+      <button type="button" class="button-primary" id="submit">Confirm</button>
+    </form>
+  </section>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://progali.ir/">Prog Ali</a>.
   </div>
-</body>
 
+  <script src="./main.js"></script>
+</body>
 </html>
