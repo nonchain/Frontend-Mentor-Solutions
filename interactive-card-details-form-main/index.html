@@ -15,16 +15,17 @@
 
 <body class="flex flex-col items-center justify-center gap-12">
 
-  <section class="flex flex-col gap-24 font-medium">
+  <section class="flex flex-col gap-24 font-medium lg:grid lg:grid-cols-5">
     <!-- CARD SECTION -->
-    <div id="card-section" class="w-full flex relative">
-      <img class="w-full abosolute inset-0 object-cover" src="./images/bg-main-mobile.png" alt="background">
+    <div id="card-section" class="w-full flex relative lg:col-span-2">
+      <img class="w-full abosolute inset-0 object-cover lg:hidden" src="./images/bg-main-mobile.png" alt="background">
+      <img class="w-full abosolute max-h-screen object-cover hidden lg:block" src="./images/bg-main-desktop.png" alt="background">
       <!-- CARD BACK -->
-      <div class="w-[19rem] absolute right-4 top-8">
+      <div class="w-[19rem] absolute right-4 top-8 lg:w-80 lg:right-[-25%] lg:top-1/2">
         <img class="w-full object-cover " src="./images/bg-card-back.png" alt="card_back" />
       </div>
       <!-- CARD FRONT -->
-      <div class="w-[19rem] absolute left-4 -bottom-10">
+      <div class="w-[19rem] absolute left-4 -bottom-10 lg:w-80 lg:left-[60%] lg:top-1/4">
         <img class="w-full object-cover " src="./images/bg-card-front.png" alt="card_front" />
 
         <div class="px-5 w-full flex flex-col gap-y-8 absolute top-5">
@@ -34,7 +35,7 @@
               0000 0000 0000 0000
             </span>
 
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between lg:mt-3">
               <span class="text-xs text-light-gray uppercase">
                 Jane Appleseed
               </span>
@@ -47,8 +48,8 @@
       </div>
     </div>
     <!-- INFO SECTION -->
-    <form id="info-section" class="px-5 w-full flex flex-col gap-8">
-      <div class="view-form ">
+    <form id="info-section" class="px-5 w-full flex flex-col gap-8 lg:col-span-3 lg:items-center lg:justify-center">
+      <div class="view-form lg:w-1/2 ">
         <div class="w-full flex flex-col gap-y-2">
           <label for="card-name" class="label">Cardholder Name</label>
           <input type="text" id="card-name" class="input" placeholder="e.g. Jane Appleseed">
@@ -78,13 +79,13 @@
         </div>
       </div>
 
-      <div class="flex-col items-center view-done hidden">
+      <div class="flex-col items-center view-done hidden lg:col-span-3">
         <img src="./images/icon-complete.svg" alt="done">
         <h2 class="mt-8 text-2xl text-darker-violet">Thank you!</h2>
         <p class="mt-5 text-base text-dark-violet">We've added your card details
   Continue</p>
       </div>
-      <button type="button" class="button-primary" id="submit">Confirm</button>
+      <button type="button" class="button-primary lg:w-1/2" id="submit">Confirm</button>
     </form>
   </section>
 
